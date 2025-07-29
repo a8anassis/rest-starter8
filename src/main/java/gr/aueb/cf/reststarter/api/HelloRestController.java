@@ -14,6 +14,7 @@ public class HelloRestController {
     @GetMapping("/hello")
     public ResponseEntity<HelloReadOnlyDTO> hello() {
         HelloReadOnlyDTO helloReadOnlyDTO = new HelloReadOnlyDTO("Hello From Coding!");
-        return new ResponseEntity<>(helloReadOnlyDTO, HttpStatus.OK);
+//        return new ResponseEntity<>(helloReadOnlyDTO, HttpStatus.OK);
+        return ResponseEntity.ok(helloReadOnlyDTO);
     }
 }
